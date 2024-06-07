@@ -1,7 +1,14 @@
+using System.Collections.Generic;
+
 namespace Balta.ContentContext
 {
     public class Career : Content
     {
-        public int Courses { get; set; }
+        public Career(string title, string url) : base(title, url)
+        {
+            Items = [];
+        }
+        public IList<CareerItem> Items { get; set; }
+        public int TotalCourses => Items.Count;
     }
 }
