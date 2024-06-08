@@ -15,16 +15,16 @@ internal class Program
         var courses = new List<Course>();
         var courseOOP = new Course("Fundamentos OOP", "fundamentos-oop");
         var courseCsharp = new Course("Fundamentos C#", "fundamentos-csharp");
-        var courseaspNet = new Course("Fundamentos ASP.NET", "fundamentos-aspnet");
+        var courseAspNet = new Course("Fundamentos ASP.NET", "fundamentos-aspnet");
         courses.Add(courseOOP);
         courses.Add(courseCsharp);
-        courses.Add(courseaspNet);
+        courses.Add(courseAspNet);
 
         var careers = new List<Career>();
         var careerDotNet = new Career("Especialista .NET", "especialista-dotnet");
-        var careerItem1 = new CareerItem(1, "Comece por aqui", "", null);
-        var careerItem2 = new CareerItem(2, "Aprenda OOP", "", null);
-        var careerItem3 = new CareerItem(3, "Aprenda .NET", "", null);
+        var careerItem1 = new CareerItem(1, "Comece por aqui", "", courseCsharp);
+        var careerItem2 = new CareerItem(2, "Aprenda OOP", "", courseOOP);
+        var careerItem3 = new CareerItem(3, "Aprenda .NET", "", courseAspNet);
 
         careerDotNet.Items.Add(careerItem2);
         careerDotNet.Items.Add(careerItem1);
