@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Balta.NotificationContext
 {
@@ -10,13 +11,14 @@ namespace Balta.NotificationContext
         }
 
         public List<Notification> Notifications { get; set; }
+        public bool IsInvalid => Notifications.Count > 0;
 
-        public void Add(Notification notification)
+        public void AddNotification(Notification notification)
         {
             Notifications.Add(notification);
         }
 
-        public void AddRange(IEnumerable<Notification> notifications)
+        public void AddNotifications(IEnumerable<Notification> notifications)
         {
             Notifications.AddRange(notifications);
         }

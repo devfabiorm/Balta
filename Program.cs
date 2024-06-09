@@ -22,7 +22,7 @@ internal class Program
 
         var careers = new List<Career>();
         var careerDotNet = new Career("Especialista .NET", "especialista-dotnet");
-        var careerItem1 = new CareerItem(1, "Comece por aqui", "", courseCsharp);
+        var careerItem1 = new CareerItem(1, "Comece por aqui", "", null);
         var careerItem2 = new CareerItem(2, "Aprenda OOP", "", courseOOP);
         var careerItem3 = new CareerItem(3, "Aprenda .NET", "", courseAspNet);
 
@@ -39,6 +39,13 @@ internal class Program
             foreach (var item in career.Items.OrderBy(x => x.Order))
             {
                 Console.WriteLine($"{item.Order} - {item.Title}");
+                Console.WriteLine(item.Course?.Title);
+                Console.WriteLine(item.Course?.Level);
+
+                foreach (var notification in item.Notifications)
+                {
+                    Console.WriteLine($"{notification.Property} - {notification.Message}");
+                }
             }
         }
     }
