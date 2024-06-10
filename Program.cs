@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Balta.ContentContext;
+using Balta.SubscriptionContext;
 
 internal class Program
 {
@@ -46,6 +47,10 @@ internal class Program
                 {
                     Console.WriteLine($"{notification.Property} - {notification.Message}");
                 }
+
+                var paypalSubscription = new PaypalSubscription();
+                var student = new Student();
+                student.CreateSubscription(paypalSubscription);
             }
         }
     }

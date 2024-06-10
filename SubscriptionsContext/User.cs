@@ -1,6 +1,6 @@
 using Balta.SharedContext;
 
-namespace Balta.Subscription
+namespace Balta.SubscriptionContext
 {
     public class User : Base
     {
