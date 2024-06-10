@@ -9,7 +9,7 @@ namespace Balta.ContentContext
             Modules = [];
         }
 
-        public string Tag { get; set; }
+        public string Tag { get; set; } = string.Empty;
         public IList<Module> Modules { get; set; }
         public int DurationInMinutes { get; set; }
         public EContentLevel Level { get; set; }

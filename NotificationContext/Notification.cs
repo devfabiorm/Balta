@@ -13,7 +13,7 @@ namespace Balta.NotificationContext
             Message = message;
         }
 
-        public string Property { get; set; }
-        public string Message { get; set; }
+        public string Property { get; set; } = string.Empty;
+        public string Message { get; set; } = string.Empty;
     }
 }

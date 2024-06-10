@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Balta.SharedContext;
 
 namespace Balta.ContentContext
 {
@@ -10,7 +11,7 @@ namespace Balta.ContentContext
         }
 
         public int Order { get; set; }
-        public string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
         public IList<Lecture> Lectures { get; set; }
     }
 }
